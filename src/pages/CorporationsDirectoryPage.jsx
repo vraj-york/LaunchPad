@@ -97,7 +97,7 @@ export function CorporationsDirectoryPage() {
                 mb: 0.5,
               }}
             >
-              Corporations
+              Test Titlte
             </Typography>
             <Typography
               sx={{
