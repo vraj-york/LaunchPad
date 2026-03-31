@@ -89,11 +89,11 @@ export function CorporationsDirectoryPage() {
             <Typography
               component="h1"
               variant="h5"
+              color="primary"
               sx={{
                 fontFamily: '"Inter", "Helvetica", "Arial", sans-serif',
                 fontWeight: 600,
                 fontSize: 20,
-                color: 'rgba(47, 65, 74, 1)',
                 mb: 0.5,
               }}
             >
