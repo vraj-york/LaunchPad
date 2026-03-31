@@ -89,13 +89,18 @@ export function CorporationsDirectoryPage() {
             <Typography
               component="h1"
               variant="h5"
-              sx={{
+              sx={(theme) => ({
                 fontFamily: '"Inter", "Helvetica", "Arial", sans-serif',
                 fontWeight: 600,
                 fontSize: 20,
-                color: 'rgba(47, 65, 74, 1)',
                 mb: 0.5,
-              }}
+                display: 'inline-block',
+                color: theme.palette.error.main,
+                background: `linear-gradient(135deg, ${theme.palette.error.main}1F 0%, ${theme.palette.error.textPrimary}14 40%, rgba(255, 232, 235, 0.95) 100%)`,
+                px: 1.25,
+                py: 0.5,
+                borderRadius: 1,
+              })}
             >
               Corporations
             </Typography>
