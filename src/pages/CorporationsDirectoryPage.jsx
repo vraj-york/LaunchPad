@@ -97,7 +97,7 @@ export function CorporationsDirectoryPage() {
                 mb: 0.5,
               }}
             >
-              Corporations
+              Test Titlte
             </Typography>
             <Typography
               sx={{
@@ -116,17 +116,17 @@ export function CorporationsDirectoryPage() {
             onClick={() => navigate('/corporations/add')}
             aria-label="Add a new corporation"
             sx={{
-              background: 'rgba(48, 95, 161, 1)',
+              background: 'var(--color-success)',
               color: 'rgba(255, 255, 255, 1)',
               fontFamily: '"Inter", "Helvetica", "Arial", sans-serif',
               fontWeight: 600,
               fontSize: 14,
               textTransform: 'none',
               borderRadius: 2,
-              '&:hover': { background: 'rgba(48, 95, 161, 0.9)' },
+              '&:hover': { background: 'rgba(47, 143, 107, 0.9)' },
             }}
           >
-            Add New Corporation
+            New Test Corporation
           </Button>
         </Box>
 
@@ -138,13 +138,24 @@ export function CorporationsDirectoryPage() {
             overflow: 'hidden',
           }}
         >
-          <Box sx={{ p: 2, display: 'flex', flexWrap: 'wrap', gap: 2, alignItems: 'center' }}>
-            <SearchInput
-              placeholder="Search here..."
-              value={filters.searchText}
-              onChange={handleSearchChange}
-              aria-label="Search corporation directory"
-            />
+          <Box
+            sx={{
+              p: 2,
+              display: 'grid',
+              gap: 2,
+              alignItems: 'center',
+              gridTemplateColumns: { xs: '1fr', md: 'minmax(280px, 1fr) auto auto' },
+            }}
+          >
+            <Box sx={{ minWidth: 0, width: '100%' }}>
+              <SearchInput
+                fullWidth
+                placeholder="Search here..."
+                value={filters.searchText}
+                onChange={handleSearchChange}
+                aria-label="Search corporation directory"
+              />
+            </Box>
             <CustomSelect
               options={STATUS_FILTER_OPTIONS}
               value={filters.status}
